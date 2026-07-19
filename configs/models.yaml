@@ -1,0 +1,46 @@
+# Hyperparameters for each baseline model. Consumed by
+# src/cognitivecyber/models/baselines.py when constructing models from config
+# (rather than the hardcoded defaults) -- see docs/experiment_guide.md.
+
+RandomForest:
+  n_estimators: 200
+  max_depth: null
+
+DecisionTree:
+  max_depth: 12
+
+XGBoost:
+  n_estimators: 300
+  max_depth: 6
+  learning_rate: 0.1
+  subsample: 0.9
+  colsample_bytree: 0.9
+
+LightGBM:
+  n_estimators: 300
+  max_depth: -1
+  learning_rate: 0.1
+
+CatBoost:
+  iterations: 300
+  depth: 6
+  learning_rate: 0.1
+
+SVM:
+  kernel: rbf
+  probability: true
+
+MLP:
+  hidden_layer_sizes: [64, 32]
+  max_iter: 200
+  early_stopping: true
+
+IsolationForest:
+  n_estimators: 200
+
+LocalOutlierFactor:
+  n_neighbors: 35
+
+OneClassSVM:
+  kernel: rbf
+  gamma: scale

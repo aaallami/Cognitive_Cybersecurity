@@ -1,0 +1,39 @@
+# Base Hydra configuration for CognitiveCyber experiments.
+# Override any field from the CLI, e.g.:
+#   python experiments/run_baseline_benchmark.py dataset.n_synthetic=100000 seed=7
+
+seed: 42
+
+dataset:
+  name: null            # e.g. "UNSW-NB15"; null = auto-detect from path
+  path: null            # e.g. "datasets/raw/UNSW_NB15.csv"; null = synthetic generator
+  n_synthetic: 60000
+  attack_ratio: 0.35
+
+split:
+  test_size: 0.2
+  val_size: 0.1
+
+models:
+  supervised:
+    - RandomForest
+    - DecisionTree
+    - XGBoost
+    - LightGBM
+    - CatBoost
+    - SVM
+    - MLP
+  unsupervised:
+    - IsolationForest
+    - LocalOutlierFactor
+    - OneClassSVM
+
+output:
+  figures_dir: figures
+  tables_dir: tables
+  outputs_dir: outputs
+  figure_dpi: 300
+  figure_formats: [png, svg, pdf]
+
+logging:
+  level: INFO
