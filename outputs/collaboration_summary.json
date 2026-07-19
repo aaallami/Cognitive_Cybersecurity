@@ -1,0 +1,8 @@
+{
+  "n_incidents": 400,
+  "analyst_workload_reduction": 0.41,
+  "human_intervention_frequency": 0.59,
+  "decision_agreement_rate": 0.5254,
+  "mean_trust_score": 0.8748,
+  "overall_decision_success_rate": 1.0
+}

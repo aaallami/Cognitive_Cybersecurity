@@ -1,0 +1,16 @@
+\begin{table}
+\caption{Ablation Results}
+\label{tab:ablation_results}
+\begin{tabular}{lrrrrrr}
+\toprule
+Configuration & Detection_F1 & RL_Decision_Success & DT_Validation_Accuracy & Trust_Automation_Rate & Composite_Score & Degradation_vs_Full (%) \\
+\midrule
+Without Trust-gating (auto-execute all) & 1.0000 & 0.9300 & 0.9000 & 1.0000 & 0.9575 & -18.2100 \\
+Full POC pipeline (KG + Twin + RL + Trust) & 1.0000 & 0.9300 & 0.9000 & 0.4100 & 0.8100 & 0.0000 \\
+Without Knowledge-Graph risk term (uniform trust prior) & 1.0000 & 0.9300 & 0.9000 & 0.2600 & 0.7725 & 4.6300 \\
+Without RL policy (random) & 1.0000 & 0.6233 & 0.9000 & 0.4100 & 0.7333 & 9.4700 \\
+Without Digital-Twin validation (unvalidated actions) & 1.0000 & 0.9300 & 0.5000 & 0.4100 & 0.7100 & 12.3500 \\
+Without RL policy (static rule-based) & 1.0000 & 0.5233 & 0.9000 & 0.4100 & 0.7083 & 12.5600 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,38 @@
+{
+  "random_state": 42,
+  "dataset_meta": {
+    "label_column": "label",
+    "categorical_columns": [
+      "proto",
+      "service",
+      "state"
+    ],
+    "drop_columns": [
+      "is_synthetic",
+      "attack_cat"
+    ],
+    "is_binary": true,
+    "schema_name": "synthetic_unsw_style",
+    "is_synthetic": true,
+    "multiclass_column": "attack_cat"
+  },
+  "n_samples": 60000,
+  "n_features_after_encoding": 16,
+  "attack_ratio": 0.35,
+  "supervised_models": [
+    "RandomForest",
+    "DecisionTree",
+    "XGBoost",
+    "LightGBM",
+    "SVM",
+    "MLP",
+    "CatBoost"
+  ],
+  "unsupervised_models": [
+    "IsolationForest",
+    "LocalOutlierFactor",
+    "OneClassSVM"
+  ],
+  "best_supervised_model": "RandomForest",
+  "best_supervised_f1": 1.0
+}

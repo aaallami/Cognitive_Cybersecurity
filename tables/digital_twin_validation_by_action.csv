@@ -1,0 +1,4 @@
+action,correct_direction,confidence
+isolate,1.0000,1.0000
+monitor,0.7000,0.7717
+patch,1.0000,1.0000
