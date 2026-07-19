@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "CognitiveCyber: An Open Cognitive Cybersecurity Research Platform"
+version: 0.1.0
+date-released: 2026-07-07
+authors:
+  - family-names: "Contributors"
+    given-names: "CognitiveCyber"
+license: MIT
+repository-code: "https://github.com/your-org/CognitiveCyber"
+preferred-citation:
+  type: article
+  title: "Towards Cognitive Cybersecurity: A Human-AI Collaborative Architecture for Adaptive National Cyber Defense"
+  authors:
+    - family-names: "TBD"
+      given-names: "TBD"
+  year: 2026
+  notes: "Update authors/venue/DOI once the paper is accepted/published."

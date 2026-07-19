@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  cognitivecyber:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/workspace
+    environment:
+      - PYTHONPATH=/workspace/src
+
+  # Optional: MLflow tracking server for experiment tracking (see docs/reproducibility.md).
+  # Not started by default -- run `docker compose --profile mlflow up` to include it.
+  mlflow:
+    image: python:3.12-slim
+    profiles: ["mlflow"]
+    working_dir: /mlflow
+    command: >
+      bash -c "pip install --no-cache-dir mlflow==2.14.1 &&
+               mlflow server --host 0.0.0.0 --port 5000
+               --backend-store-uri sqlite:///mlflow.db
+               --default-artifact-root /mlflow/artifacts"
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./outputs/mlflow:/mlflow

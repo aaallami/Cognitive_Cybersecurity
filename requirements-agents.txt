@@ -1,0 +1,8 @@
+# Optional: multi-agent orchestration layer (task decomposition, agent
+# communication, collaborative reasoning) described in the paper's
+# architecture. Requires an LLM backend (see requirements-llm.txt) plus,
+# for OpenAI Agents SDK, an OpenAI API key.
+
+langgraph>=0.1
+crewai>=0.35
+openai>=1.30

@@ -1,0 +1,11 @@
+# Optional: LLM-based incident summarization / MITRE-mapping / RAG components.
+# Requires either local model weights + a GPU (Llama/Qwen/Gemma/DeepSeek via
+# Hugging Face) or API credentials for a hosted model provider. Not runnable
+# in a network- and GPU-restricted sandbox -- see docs/architecture.md for
+# the documented interface and how to supply credentials/weights.
+
+transformers>=4.40
+sentence-transformers>=2.6
+faiss-cpu>=1.8
+langchain>=0.2
+anthropic>=0.30

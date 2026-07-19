@@ -1,0 +1,8 @@
+# Optional: deep/sequence-model baselines (CNN/LSTM/Transformer/Autoencoder/DeepSVDD)
+# and RL agents. Requires a GPU for realistic training times on full datasets.
+# See src/cognitivecyber/models/deep_stubs.py for the architecture contracts,
+# and docs/architecture.md for how these plug into the rest of the pipeline.
+
+torch>=2.2
+stable-baselines3>=2.3
+gymnasium>=0.29
